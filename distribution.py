@@ -36,7 +36,7 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
-u = str(input("Please enter a string of text (the bigger the better): "))
+orig = str(input("Please enter a string of text (the bigger the better): "))
 print('The distribution of character in "' + u + '" is: ')
-s = u.count('i')
-print('i' x 6)
+i = orig.count('i')
+alph = "abcdefghijklmnopqrstuvwxyz"
