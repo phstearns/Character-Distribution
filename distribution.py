@@ -40,3 +40,5 @@ orig = str(input("Please enter a string of text (the bigger the better): "))
 print('The distribution of character in "' + u + '" is: ')
 i = orig.count('i')
 alph = "abcdefghijklmnopqrstuvwxyz"
+for c in alph:
+    print(orig.count(c))
