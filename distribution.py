@@ -38,4 +38,5 @@ Notice about this example:
 """
 u = str(input("Please enter a string of text (the bigger the better): "))
 print('The distribution of character in "' + u + '" is: ')
-print(u.count('i'))
+s = u.count('i')
+print('i' x 6)
