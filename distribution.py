@@ -37,8 +37,7 @@ Notice about this example:
 * Letters that do not occur in the text are not listed in the output at all.
 """
 orig = str(input("Please enter a string of text (the bigger the better): "))
-print('The distribution of character in "' + u + '" is: ')
-i = orig.count('i')
+print('The distribution of character in "' + orig + '" is: ')
 alph = "abcdefghijklmnopqrstuvwxyz"
 for c in alph:
     print(orig.count(c))
