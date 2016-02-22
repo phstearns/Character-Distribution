@@ -39,6 +39,17 @@ Notice about this example:
 def compare(a, b):
     return b > a
 
+orig = str(input("Please enter a string of text (the bigger the better): "))
+print('The distribution of character in "' + orig + '" is: ')
+alph = "abcdefghijklmnopqrstuvwxyz"
+results = []
+
+for c in alph:
+    r = orig.count(c)
+    if not r == 0:
+        t = (r*c)
+        results.append(t)
+
 def bsort(seq, cmp):
     """
     bsort - simple sorting algorithm that uses any comparison function
@@ -53,17 +64,6 @@ def bsort(seq, cmp):
                 if not cmp(seq[index-1], value):  # if this element is out of order
                     sorted = False          # then the list is not sorted yet
                     seq[index-1], seq[index] = seq[index], seq[index-1] # and swap it
-
-orig = str(input("Please enter a string of text (the bigger the better): "))
-print('The distribution of character in "' + orig + '" is: ')
-alph = "abcdefghijklmnopqrstuvwxyz"
-results = []
-
-for c in alph:
-    r = orig.count(c)
-    if not r == 0:
-        t = (r*c)
-        results.append(t)
 
 bsort(results, compare)
 print(results)
