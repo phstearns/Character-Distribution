@@ -38,11 +38,14 @@ Notice about this example:
 """
 orig = str(input("Please enter a string of text (the bigger the better): "))
 print('The distribution of character in "' + orig + '" is: ')
+
+"""
 alph = "abcdefghijklmnopqrstuvwxyz"
 for c in alph:
     sort
     print(orig.count(c))
-    
+"""
+
 def compare(a, b):
     """
     compare - generic comparison function for testing two elements.
