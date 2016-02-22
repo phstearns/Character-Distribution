@@ -39,8 +39,9 @@ Notice about this example:
 def compare(a, b):
     return b > a
 
-orig = str(input("Please enter a string of text (the bigger the better): "))
+o = str(input("Please enter a string of text (the bigger the better): "))
 print('The distribution of character in "' + orig + '" is: ')
+orig = o.lower()
 alph = "abcdefghijklmnopqrstuvwxyz"
 results = []
 
