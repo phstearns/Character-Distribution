@@ -47,9 +47,6 @@ for c in alph:
 """
 
 def compare(a, b):
-    """
-    compare - generic comparison function for testing two elements.
-    """
     return b > a
 
 
