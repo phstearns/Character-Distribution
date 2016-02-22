@@ -45,4 +45,5 @@ for c in alph:
     if not r == 0:
         t = (r*c)
         results.append(t)
+sort(results)
 print(results)
