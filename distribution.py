@@ -38,28 +38,7 @@ Notice about this example:
 """
 orig = str(input("Please enter a string of text (the bigger the better): "))
 print('The distribution of character in "' + orig + '" is: ')
-
-"""
 alph = "abcdefghijklmnopqrstuvwxyz"
 for c in alph:
     sort
     print(orig.count(c))
-"""
-
-def compare(a, b):
-    return b > a
-
-
-def bsort(seq, cmp):
-    sorted = False  
-    while not sorted:
-        sorted = True   
-        for index, value in enumerate(seq):
-            if index > 0:                
-                if not cmp(seq[index-1], value): 
-                    sorted = False
-                    seq[index-1], seq[index] = seq[index], seq[index-1] 
-
-
-bsort(orig, compare)
-print(orig)
