@@ -40,5 +40,6 @@ orig = str(input("Please enter a string of text (the bigger the better): "))
 print('The distribution of character in "' + orig + '" is: ')
 alph = "abcdefghijklmnopqrstuvwxyz"
 for c in alph:
-    sort
-    print(orig.count(c))
+    r = orig.count(c)
+    if not r == 0:
+        print(r*c)
