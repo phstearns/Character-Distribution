@@ -39,8 +39,10 @@ Notice about this example:
 orig = str(input("Please enter a string of text (the bigger the better): "))
 print('The distribution of character in "' + orig + '" is: ')
 alph = "abcdefghijklmnopqrstuvwxyz"
+results = []
 for c in alph:
     r = orig.count(c)
     if not r == 0:
         t = (r*c)
+        results.append(t)
         
