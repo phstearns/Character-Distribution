@@ -42,4 +42,5 @@ alph = "abcdefghijklmnopqrstuvwxyz"
 for c in alph:
     r = orig.count(c)
     if not r == 0:
-        print(r*c)
+        t = (r*c)
+        
