@@ -44,14 +44,16 @@ print('The distribution of character in "' + orig + '" is: ')
 orig = o.lower()
 alph = "abcdefghijklmnopqrstuvwxyz"
 results = []
+listnum = []
 
 for c in alph:
     r = orig.count(c)
     if not r == 0:
         t = (r*c)
         results.append(t)
+        lisnum.append(r)
 
-def bsort(seq, cmp):
+def bsort(results, listnum):
     """
     bsort - simple sorting algorithm that uses any comparison function
     seq - a list to be sorted
@@ -60,11 +62,11 @@ def bsort(seq, cmp):
     sorted = False  # assume the seq is not sorted to start with
     while not sorted:
         sorted = True   # assume it's already sorted correctly
-        for index, value in enumerate(seq): # for every element in seq
+        for index, value in enumerate(results): # for every element in seq
             if index > 0:                   # past the first..
-                if not cmp(seq[index-1], value):  # if this element is out of order
+                if not listnum(results[index-1], value):  # if this element is out of order
                     sorted = False          # then the list is not sorted yet
-                    seq[index-1], seq[index] = seq[index], seq[index-1] # and swap it
+                    results[index-1], results[index] = results[index], results[index-1] # and swap it
 
 bsort(results, compare)
 print(results)
