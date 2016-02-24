@@ -50,4 +50,4 @@ for c in alph:
         results.append(t)
         listnum.append(r)
 
-print(results, end="")
+print(results," ", end=" ")
