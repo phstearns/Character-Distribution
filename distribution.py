@@ -41,8 +41,7 @@ def compare(a, b):
     """
     compare - generic comparison function for testing two elements.
     """
-    while b > a:
-        return b > a
+    return b > a
 
 
 o = str(input("Please enter a string of text (the bigger the better): "))
@@ -59,7 +58,8 @@ for c in alph:
         results.append(t)
         listnum.append(r)
 
-print(results)
+zip([results],[listnum])
+
 
 
 
