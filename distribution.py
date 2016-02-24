@@ -36,11 +36,8 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
-def compare(a, b):
-    return b > a
-
 o = str(input("Please enter a string of text (the bigger the better): "))
-print('The distribution of character in "' + orig + '" is: ')
+print('The distribution of character in "' + o + '" is: ')
 orig = o.lower()
 alph = "abcdefghijklmnopqrstuvwxyz"
 results = []
@@ -51,22 +48,6 @@ for c in alph:
     if not r == 0:
         t = (r*c)
         results.append(t)
-        lisnum.append(r)
+        listnum.append(r)
 
-def bsort(results, listnum):
-    """
-    bsort - simple sorting algorithm that uses any comparison function
-    seq - a list to be sorted
-    cmp - a function for comparing two elements of seq
-    """
-    sorted = False  # assume the seq is not sorted to start with
-    while not sorted:
-        sorted = True   # assume it's already sorted correctly
-        for index, value in enumerate(results): # for every element in seq
-            if index > 0:                   # past the first..
-                if not listnum(results[index-1], value):  # if this element is out of order
-                    sorted = False          # then the list is not sorted yet
-                    results[index-1], results[index] = results[index], results[index-1] # and swap it
-
-bsort(results, compare)
-print(results)
+print(results, end="")
