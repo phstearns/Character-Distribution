@@ -58,8 +58,7 @@ for c in alph:
         results.append(t)
         listnum.append(r)
 
-zip([results],[listnum])
-
+print(results)
 
 
 
