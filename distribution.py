@@ -59,8 +59,8 @@ for c in alph:
         listnum.append(r)
 
 l=len(results)
-for b in range(1,l-1)
-    m=len(result[-b])
+for b in range(1, l-1)
+    m=len(results[-b])
     new.append(m)
 print(new)
 
