@@ -1,7 +1,7 @@
 """
 distribution.py
 Author: Payton
-Credit: Avery, Daniel, Mr. Dennison, http://stackoverflow.com/questions/14736322/character-distributions
+Credit: Avery, Daniel, Mr. Dennison
 
 Assignment:
 
