@@ -1,7 +1,7 @@
 """
 distribution.py
 Author: Payton
-Credit: Avery, Daniel, Mr. Dennison
+Credit: Avery, Daniel, Mr. Dennison, http://stackoverflow.com/questions/14736322/character-distributions
 
 Assignment:
 
@@ -43,7 +43,7 @@ for ch in ex.lower():
     if ch.isalpha(): dist.setdefault(ch,[]).extend(ch)
 
 out={k:''.join(val) for k,val in dist.iteritems()}.values()
-print '\n'.join(sorted(out, key=lambda x: (-len(x),x)))
+print('\n'.join(sorted(out, key=lambda x: (-len(x),x))))
 
 """
 orig = o.lower()
@@ -51,13 +51,6 @@ alph = "abcdefghijklmnopqrstuvwxyz"
 results = []
 listnum = []
 """
-
-
-for ch in o.lower():
-    if ch.isalpha(): dist.setdefault(ch,[]).extend(ch)
-
-out={k:''.join(val) for k,val in dist.iteritems()}.values()
-print '\n'.join(sorted(out, key=lambda x: (-len(x),x)))
 
 
 
