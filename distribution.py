@@ -1,7 +1,7 @@
 """
 distribution.py
 Author: Payton
-Credit: 
+Credit: Avery, Daniel, Mr. Dennison
 
 Assignment:
 
@@ -62,7 +62,7 @@ l=len(results)
 for b in range(1, l-1):
     m=len(results[-b])
     new.append(m)
-print(new)
+
 
 
 print(results)
