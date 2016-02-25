@@ -36,10 +36,15 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
-
 dist={}
-o = str(input("Please enter a string of text (the bigger the better): "))
-print('The distribution of character in "' + o + '" is: ')
+ex= str(input("Please enter a string of text (the bigger the better): "))
+print('The distribution of character in "' + ex + '" is: ')
+for ch in ex.lower():
+    if ch.isalpha(): dist.setdefault(ch,[]).extend(ch)
+
+out={k:''.join(val) for k,val in dist.iteritems()}.values()
+print '\n'.join(sorted(out, key=lambda x: (-len(x),x)))
+
 """
 orig = o.lower()
 alph = "abcdefghijklmnopqrstuvwxyz"
