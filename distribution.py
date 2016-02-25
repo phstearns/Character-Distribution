@@ -41,27 +41,15 @@ def compare(a, b):
     compare - generic comparison function for testing two elements.
     """
     return b > a
-"""
-dist={}
+
 o = str(input("Please enter a string of text (the bigger the better): "))
 print('The distribution of character in "' + o + '" is: ')
-"""
+
 orig = o.lower()
 alph = "abcdefghijklmnopqrstuvwxyz"
 results = []
 listnum = []
-"""
 
-
-for ch in o.lower():
-    if ch.isalpha(): dist.setdefault(ch,[]).extend(ch)
-
-out={k:''.join(val) for k,val in dist.iteritems()}.values()
-print '\n'.join(sorted(out, key=lambda x: (-len(x),x)))
-
-
-
-"""
 for c in alph:
     r = orig.count(c)
     if not r == 0:
