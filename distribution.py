@@ -72,4 +72,3 @@ def bsort(seq, cmp):
                     seq[index-1], seq[index] = seq[index], seq[index-1] # and swap it
 bsort(results, compare)
 print(results)
-"""
