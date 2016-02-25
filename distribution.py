@@ -36,11 +36,52 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
+def compare(a, b):
+    """
+    compare - generic comparison function for testing two elements.
+    """
+    return b > a
+"""
 dist={}
-ex= str(input("Please enter a string of text (the bigger the better): "))
-print('The distribution of character in "' + ex + '" is: ')
-for ch in ex.lower():
+o = str(input("Please enter a string of text (the bigger the better): "))
+print('The distribution of character in "' + o + '" is: ')
+"""
+orig = o.lower()
+alph = "abcdefghijklmnopqrstuvwxyz"
+results = []
+listnum = []
+"""
+
+
+for ch in o.lower():
     if ch.isalpha(): dist.setdefault(ch,[]).extend(ch)
 
 out={k:''.join(val) for k,val in dist.iteritems()}.values()
-print('\n'.join(sorted(out, key=lambda x: (-len(x),x))))
+print '\n'.join(sorted(out, key=lambda x: (-len(x),x)))
+
+
+
+"""
+for c in alph:
+    r = orig.count(c)
+    if not r == 0:
+        t = (r*c)
+        results.append(t)
+        listnum.append(r)
+def bsort(seq, cmp):
+    """
+    bsort - simple sorting algorithm that uses any comparison function
+    seq - a list to be sorted
+    cmp - a function for comparing two elements of seq
+    """
+    sorted = False  # assume the seq is not sorted to start with
+    while not sorted:
+        sorted = True   # assume it's already sorted correctly
+        for index, value in enumerate(seq): # for every element in seq
+            if index > 0:                   # past the first..
+                if not cmp(seq[index-1], value):  # if this element is out of order
+                    sorted = False          # then the list is not sorted yet
+                    seq[index-1], seq[index] = seq[index], seq[index-1] # and swap it
+bsort(results, compare)
+print(results)
+"""
