@@ -49,7 +49,6 @@ orig = o.lower()
 alph = "abcdefghijklmnopqrstuvwxyz"
 results = []
 listnum = []
-new = []
 
 for c in alph:
     r = orig.count(c)
@@ -57,14 +56,6 @@ for c in alph:
         t = (r*c)
         results.append(t)
         listnum.append(r)
-
-l=len(results)
-for b in range(1, l-1):
-    m=len(results[-b])
-    new.append(m)
-
-
-
 
 
 
