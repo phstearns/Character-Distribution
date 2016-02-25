@@ -53,6 +53,13 @@ for c in alph:
         t = (r*c)
         results.append(t)
         listnum.append(r)
+
+lists=zip(listnum,result)
+print(list(lists))
+
+sorted(results, key=lambda student: student.age)   # sort by age
+[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]
+
 def bsort(seq, cmp):
     sorted = False  
     while not sorted:
@@ -62,5 +69,6 @@ def bsort(seq, cmp):
                 if not cmp(seq[index-1], value):  
                     sorted = False         
                     seq[index-1], seq[index] = seq[index], seq[index-1] 
+                    
 bsort(results, compare)
 print(results)
