@@ -54,7 +54,7 @@ for c in alph:
         results.append(t)
         listnum.append(r)
 
-lists=zip(listnum,result)
+lists=zip(listnum,results)
 print(list(lists))
 
 sorted(results, key=lambda student: student.age)   # sort by age
