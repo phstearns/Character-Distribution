@@ -36,9 +36,6 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
-def compare(a, b):
-    return b > a
-
 o = str(input("Please enter a string of text (the bigger the better): "))
 print('The distribution of character in "' + o + '" is: ')
 
@@ -57,27 +54,11 @@ for c in alph:
 lists=zip(listnum,results)
 
 
-list1 = sorted(results, key=lambda results: listnum[2])  
-list1.sort(reverse=True)
-print(list(list1))
-l=len(x[1] for x in lists)
-for y in range(0,l-1):
+lists = sorted(lists, key=lambda listnum: listnum[2])  
+lists.sort(reverse=True)
+print(list(lists))
+l=len([x[1] for x in lists])
+for y in range(0, l-1):
     if not y==y+1:
-        a=list(r[1] for r in lists)
+        a=list([r[1] for r in lists])
         print(a[y])
-    elif y==y-1:
-        b=list(r[x] for r in lists)
-        print(a[x])
-
-def bsort(seq, cmp):
-    sorted = False  
-    while not sorted:
-        sorted = True   
-        for index, value in enumerate(seq): 
-            if index > 0:                  
-                if not cmp(seq[index-1], value):  
-                    sorted = False         
-                    seq[index-1], seq[index] = seq[index], seq[index-1] 
-
-bsort(results, compare)
-print(results)
