@@ -53,7 +53,6 @@ for c in alph:
 
 lists=zip(listnum,results)
 lists = sorted(lists, key=lambda listnum: (-listnum[0], listnum[1]))  
-lists.sort(reverse=True)
 l=len([x[1] for x in lists])
 for y in range(0, l-1):
     if not y==y+1:
