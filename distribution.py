@@ -57,7 +57,7 @@ for c in alph:
 lists=zip(listnum,results)
 print(list(lists))
 
-sorted(results, key=lambda results: listnum[2])   # sort by age
+sorted(results, key=lambda listnum: listnum[2])   # sort by age
 
 
 def bsort(seq, cmp):
