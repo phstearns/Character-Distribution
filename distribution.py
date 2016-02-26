@@ -54,7 +54,7 @@ for c in alph:
 lists=zip(listnum,results)
 
 
-lists = sorted(lists, key=lambda listnum: listnum[2])  
+lists = sorted(lists, key=lambda listnum: listnum[0])  
 lists.sort(reverse=True)
 print(list(lists))
 l=len([x[1] for x in lists])
