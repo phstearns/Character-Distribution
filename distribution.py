@@ -57,10 +57,15 @@ for c in alph:
 lists=zip(listnum,results)
 print(list(lists))
 
-varlam = lambda
-list1 = sorted(results, key=lambda results: listnum[2])   # sort by age
-list1=sorted(reverse=True)
-print(list1)
+
+list1 = sorted(results, key=lambda results: listnum[2])  
+list1.sort(reverse=True)
+print(list(list2))
+l=len([x[1] for x in list1])
+for y in range(0,l-1):
+    if not y==y+1:
+        a=list([r[1] for r in list1])
+        print(a[y])
 
 def bsort(seq, cmp):
     sorted = False  
@@ -71,6 +76,6 @@ def bsort(seq, cmp):
                 if not cmp(seq[index-1], value):  
                     sorted = False         
                     seq[index-1], seq[index] = seq[index], seq[index-1] 
-                    
+
 bsort(results, compare)
 print(results)
