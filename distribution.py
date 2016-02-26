@@ -55,7 +55,6 @@ for c in alph:
         listnum.append(r)
 
 lists=zip(listnum,results)
-print(list(lists))
 
 
 list1 = sorted(results, key=lambda results: listnum[2])  
