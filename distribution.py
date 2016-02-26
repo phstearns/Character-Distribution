@@ -57,10 +57,9 @@ lists=zip(listnum,results)
 lists = sorted(lists, key=lambda listnum: listnum[0])  
 lists.sort(reverse=True)
 l=len([x[1] for x in lists])
-a=list([r[1] for r in lists])
 for y in range(0, l-1):
-    if (a[y])==len(a[y+1]):
+    if not y==y+1:
         a=list([r[1] for r in lists])
         print(a[y])
-    if not (a[y])==len(a[y+1]):
-        print(a[y])
+    if (a[y])==len(a[y+1]):
+        print(a)
